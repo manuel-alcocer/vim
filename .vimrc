@@ -149,6 +149,10 @@ function! RunMysql()
 	nnoremap <F6> :w! <bar> :lexpr system("mysql -u<C-r>u --password=\"<C-r>p\" < ".expand("%:t")) \| silent redraw! \| lopen<CR>
     """ Muestra en una ventana el fichero en remoto
 	nnoremap <F9> :w! <bar> :lexpr system("mysql --host=\"<C-r>h\" -u<C-r>u --password=\"<C-r>p\" < ".expand("%:t")) \| silent redraw! \| lopen<CR>
+
+    """ Macros
+    let @a = '€kh€kI-- €kd€kh'
+    let @s = '€kh3xd$€kIselect '"€@7;'
 endfunction
 
 autocmd FileType sql :call RunMysql()
