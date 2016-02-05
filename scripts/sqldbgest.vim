@@ -74,8 +74,6 @@ function! s:ActivarComandos()
         nnoremap <F7> "eyy <bar> :!psql -d<C-r>d -h<C-r>h -U<C-r>u -c "<C-r>e"<CR>
         nnoremap <F8> :w! <bar> :lexpr system("psql -h\"<C-r>h\" -U<C-r>u -d<C-r>d -f ".expand("%:t")) \| silent redraw! \| lopen<CR>
         nnoremap <F9> "eyy <bar> :lexpr system("psql -h<C-r>h -U<C-r>u -d<C-r>d -c \"<C-r>e\"") \| silent redraw! \| lopen<CR>
-    elseif @g == 1
-        finish
     endif
 endfunction
 
