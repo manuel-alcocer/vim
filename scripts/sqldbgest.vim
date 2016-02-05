@@ -1,14 +1,15 @@
 " Vim 'filetype plugin' para trabajar con algunos sistemas gestores
 " de bases de datos en SQL.
-" Last change: Today
-" Maintaner: Manuel Alcocer Jiménez <m.alcocer1978@gmail.com>
+" Script Name: sqldbgest.vim
+" Last Change: Today
+" Maintaner: Manuel Alcocer <m.alcocer1978@gmail.com>
 " License: GPL 2
 
 "" Inicialización del script
-if exists("g:loaded_typecorr")
+if exists("g:sqldbgest_cargado")
     finish
 endif
-let g:loaded_typecorr = 0
+let g:sqldbgest_cargado = 0
 let s:save_cpo = &cpo
 set cpo&vim
 
